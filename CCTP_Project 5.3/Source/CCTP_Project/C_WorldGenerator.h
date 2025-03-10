@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "ProceduralMeshComponent.h"
 #include "C_WorldGenerator.generated.h"
 
 UCLASS()
@@ -14,6 +15,7 @@ class CCTP_PROJECT_API AC_WorldGenerator : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AC_WorldGenerator();
+	
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	int XVertexCount = 50;
@@ -33,6 +35,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int MeshSectionIndex = 0;
 
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UProceduralMeshComponent* TerrainMesh;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UMaterialInterface* TerrainMaterial = nullptr;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -40,5 +51,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UFUNCTION(BlueprintCallable)
+	void GenerateMap(const int SectionIndexX, const int SectionIndexY);
+
+
 
 };

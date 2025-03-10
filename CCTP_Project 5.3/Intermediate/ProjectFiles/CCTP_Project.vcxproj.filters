@@ -39,12 +39,6 @@
     <ClInclude Include="..\..\Source\CCTP_Project\CCTP_Project.h">
       <Filter>Source\CCTP_Project</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\CCTP_Project\C_WorldGeneration.cpp">
-      <Filter>Source\CCTP_Project</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\CCTP_Project\C_WorldGeneration.h">
-      <Filter>Source\CCTP_Project</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\CCTP_Project\C_WorldGenerator.cpp">
       <Filter>Source\CCTP_Project</Filter>
     </ClCompile>

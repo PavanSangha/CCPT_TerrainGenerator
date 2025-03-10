@@ -7,13 +7,18 @@
 AC_WorldGenerator::AC_WorldGenerator()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-
+	PrimaryActorTick.bCanEverTick = false;
+    TerrainMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("Terrain Mesh"));
+	TerrainMesh->SetupAttachment(GetRootComponent());
+	
 }
 
 // Called when the game starts or when spawned
 void AC_WorldGenerator::BeginPlay()
 {
+	
+	
+	
 	Super::BeginPlay();
 	
 }
@@ -22,6 +27,11 @@ void AC_WorldGenerator::BeginPlay()
 void AC_WorldGenerator::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+}
+
+void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIndexY)
+{
 
 }
 
