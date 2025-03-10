@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-CCTP_Project-Win64-DebugGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\CCTP_ProjectEditor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.Cpp20.InclOrderUnreal5_0.h.obj"
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\CCTP_Project.init.gen.cpp.obj"
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\C_WorldGeneration.gen.cpp.obj"
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\C_WorldGenerator.gen.cpp.obj"
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\CCTP_Project.cpp.obj"
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\C_WorldGeneration.cpp.obj"
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\C_WorldGenerator.cpp.obj"
+"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\Default.rc2.res"
+/OUT:"C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\CCTP_Project\UnrealEditor-CCTP_Project-Win64-DebugGame.lib"

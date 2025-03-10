@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\CCPT\\CCPT_TerrainGenerator\\CCTP_Project 5.3\\Source\\CCTP_Project\\CCTP_Project.Build.cs",
+		"C:\\CCPT\\CCPT_TerrainGenerator\\CCTP_Project 5.3\\Source\\CCTP_Project.Target.cs",
+		"C:\\CCPT\\CCPT_TerrainGenerator\\CCTP_Project 5.3\\Source\\CCTP_ProjectEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}
