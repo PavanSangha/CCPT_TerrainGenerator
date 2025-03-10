@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CCTP_ProjectModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2aaaed49f4efbbb15cb4f06c6a7798eb2665f52")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb63a06808850bbc029e753bd2b7c6479318f327")]
 [assembly: System.Reflection.AssemblyProductAttribute("CCTP_ProjectModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CCTP_ProjectModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -18,6 +18,21 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	int XVertexCount = 50;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int YvertexCount = 50;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float CellSize = 1000;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int NumSectionX = 2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	int NumSectionY = 2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int MeshSectionIndex = 0;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
