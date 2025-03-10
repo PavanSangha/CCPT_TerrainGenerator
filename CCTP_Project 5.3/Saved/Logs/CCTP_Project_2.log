@@ -1,4 +1,4 @@
-﻿Log file open, 03/10/25 17:57:25
+Log file open, 03/10/25 17:57:25
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogProfilingDebugging: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
@@ -593,3 +593,69 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2025.03.10-17.57.25:658][  0]LogD3D12RHI: Aftermath initialized
 [2025.03.10-17.57.25:659][  0]LogD3D12RHI: Loading WinPixEventRuntime.dll for PIX profiling (from ../../../Engine/Binaries/ThirdParty/Windows/WinPixEventRuntime/x64).
 [2025.03.10-17.57.25:659][  0]LogRHI: Checking if RHI D3D12 with Feature Level SM6 is supported by your system.
+
+[2025.03.10-17.48.57:102][  1]Running Python start-up script 'C:/Program Files/Epic Games/UE_5.3/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py': 0.078921 secs
+[2025.03.10-17.48.57:102][  1]LogLiveCoding: Display: LiveCodingConsole Arguments: CCTP_ProjectEditor Win64 DebugGame
+[2025.03.10-17.48.57:126][  1]LogD3D12RHI: Cannot end block when stack is empty
+[2025.03.10-17.49.10:220][510]LogLiveCoding: Display: Starting Live Coding compile.
+[2025.03.10-17.49.11:360][647]Display: Reload/Re-instancing Complete: No object changes detected
+[2025.03.10-17.49.11:360][647]LogLiveCoding: Display: Live coding succeeded, no code changes detected
+[2025.03.10-17.50.27:591][824]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.03.10-17.50.27:595][824]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.03.10-17.50.27:596][824]PIE: New page: PIE session: World_generator (10 Mar 2025, 17:50:27)
+[2025.03.10-17.50.27:600][824]LogOnline: OSS: Created online subsystem instance for: NULL
+[2025.03.10-17.50.27:600][824]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+[2025.03.10-17.50.27:600][824]LogPlayLevel: Creating play world package: /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.10-17.50.27:603][824]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002272s)
+[2025.03.10-17.50.27:603][824]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MapGeneration/World_generator.World_generator to /Game/MapGeneration/UEDPIE_0_World_generator.World_generator (0.002466s)
+[2025.03.10-17.50.27:607][824]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2025.03.10-17.50.27:609][824]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.10-17.50.27:609][824]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2025.03.10-17.50.27:609][824]LogAIModule: Creating AISystem for world World_generator
+[2025.03.10-17.50.27:610][824]LogPlayLevel: PIE: World Init took: (0.001172s)
+[2025.03.10-17.50.27:610][824]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2025.03.10-17.50.27:610][824]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.03.10-17.50.27:610][824]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.03.10-17.50.27:610][824]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.03.10-17.50.27:610][824]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.03.10-17.50.27:610][824]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.03.10-17.50.27:610][824]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.03.10-17.50.27:610][824]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.03.10-17.50.27:610][824]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.03.10-17.50.27:611][824]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.03.10-17.50.27:611][824]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.03.10-17.50.27:611][824]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.03.10-17.50.27:613][824]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.03.10-17.50.27:632][824]LogAudioMixer: Display: Using Audio Hardware Device Speakers (EKSA E1000 WT)
+[2025.03.10-17.50.27:632][824]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.03.10-17.50.27:632][824]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.03.10-17.50.27:632][824]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.03.10-17.50.27:633][824]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2025.03.10-17.50.27:633][824]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2025.03.10-17.50.27:635][824]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2025.03.10-17.50.27:635][824]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2025.03.10-17.50.27:635][824]LogInit: FAudioDevice initialized with ID 2.
+[2025.03.10-17.50.27:635][824]LogAudio: Display: Audio Device (ID: 2) registered with world 'World_generator'.
+[2025.03.10-17.50.27:635][824]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 2
+[2025.03.10-17.50.27:637][824]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2025.03.10-17.50.27:638][824]LogWorld: Bringing World /Game/MapGeneration/UEDPIE_0_World_generator.World_generator up for play (max tick rate 0) at 2025.03.10-17.50.27
+[2025.03.10-17.50.27:638][824]LogWorld: Bringing up level for play took: 0.000801
+[2025.03.10-17.50.27:641][824]LogOnline: OSS: Created online subsystem instance for: :Context_1
+[2025.03.10-17.50.32:577][824]PIE: Server logged in
+[2025.03.10-17.50.32:578][824]PIE: Play in editor total start time 4.983 seconds.
+[2025.03.10-17.50.32:602][824]LogAutomationController: Ignoring very large delta of 5.02 seconds in calls to FAutomationControllerManager::Tick() and not penalizing unresponsive tests
+[2025.03.10-17.50.42:144][636]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.10-17.50.42:144][636]LogWorld: BeginTearingDown for /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.10-17.50.42:145][636]LogWorld: UWorld::CleanupWorld for World_generator, bSessionEnded=true, bCleanupResources=true
+[2025.03.10-17.50.42:145][636]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.10-17.50.42:148][636]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.03.10-17.50.42:150][636]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.10-17.50.42:153][636]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.03.10-17.50.42:153][636]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2025.03.10-17.50.42:153][636]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2025.03.10-17.50.42:155][636]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2025.03.10-17.50.42:160][636]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.10-17.50.42:161][636]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2025.03.10-17.50.43:814][637]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2025.03.10-17.50.48:714][131]LogSlate: Took 0.000164 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2025.03.10-17.51.28:809][706]LogDerivedDataCache: C:/Users/pss99/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:47.627 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 21845 files in 24099 folders with total size 6793 MiB.
