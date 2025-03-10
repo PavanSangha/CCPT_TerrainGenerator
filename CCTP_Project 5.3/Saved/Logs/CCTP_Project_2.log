@@ -1259,3 +1259,4 @@ LogConfig: Set CVar [[r.Shadow.DetectVertexShaderLayerAtRuntime:1]]
 [2025.03.10-17.50.42:161][636]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
 [2025.03.10-17.50.43:814][637]LogPlayLevel: Display: Destroying online subsystem :Context_1
 [2025.03.10-17.50.48:714][131]LogSlate: Took 0.000164 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2025.03.10-17.51.28:809][706]LogDerivedDataCache: C:/Users/pss99/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:47.627 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 21845 files in 24099 folders with total size 6793 MiB.
