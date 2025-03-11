@@ -43,7 +43,6 @@ void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIn
 	TArray<FVector> Normals;
 	TArray<FProcMeshTangent> Tangents;
 
-
 	//Vertices & UVs
 	for (int32 iVertY = -1; iVertY <= YvertexCount; iVertY++)
 	{
@@ -53,7 +52,7 @@ void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIn
 			Vertex.X = iVertX * CellSize + Offet.X;
 			Vertex.Y = iVertY * CellSize + Offet.Y;
 			Vertex.Z = 0.f;
-
+			Vertices.Add(Vertex);
 			//UVs
 			UV.X = (iVertX + (SectionIndexX * (XVertexCount - 1))) * CellSize / 100;
 			UV.Y = (iVertY + (SectionIndexY * (YvertexCount - 1))) * CellSize / 100;
