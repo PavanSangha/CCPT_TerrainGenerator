@@ -56,6 +56,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void GenerateMap(const int SectionIndexX, const int SectionIndexY);
 
-
+	float GetHeight(FVector2D Location);
 
 };
