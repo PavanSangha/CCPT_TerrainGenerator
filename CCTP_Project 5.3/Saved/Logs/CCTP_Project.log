@@ -4685,3 +4685,692 @@ Make sure 'BP_CWorldGenerator_C' has been compiled for  BP Generate Map
 [2025.03.11-21.06.52:177][651]LogFileHelpers: InternalPromptForCheckoutAndSave took 79 ms (total: 1.17 sec)
 [2025.03.11-21.06.52:202][651]AssetCheck: New page: Asset Save: BP_Map
 [2025.03.11-21.06.52:202][651]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/MapGeneration/BP_Map.BP_Map
+[2025.03.11-21.09.53:812][237]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.03.11-21.09.53:816][237]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.03.11-21.09.53:816][237]PIE: New page: PIE session: World_generator (11 Mar 2025, 21:09:53)
+[2025.03.11-21.09.53:841][237]LogPlayLevel: Creating play world package: /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.09.53:844][237]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002234s)
+[2025.03.11-21.09.53:844][237]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MapGeneration/World_generator.World_generator to /Game/MapGeneration/UEDPIE_0_World_generator.World_generator (0.002272s)
+[2025.03.11-21.09.53:858][237]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2025.03.11-21.09.53:860][237]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.11-21.09.53:860][237]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2025.03.11-21.09.53:861][237]LogAIModule: Creating AISystem for world World_generator
+[2025.03.11-21.09.53:861][237]LogPlayLevel: PIE: World Init took: (0.001076s)
+[2025.03.11-21.09.53:861][237]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2025.03.11-21.09.53:861][237]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.03.11-21.09.53:861][237]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.03.11-21.09.53:861][237]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.03.11-21.09.53:861][237]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.03.11-21.09.53:861][237]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.03.11-21.09.53:861][237]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.03.11-21.09.53:861][237]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.03.11-21.09.53:861][237]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.03.11-21.09.53:862][237]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.03.11-21.09.53:862][237]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.03.11-21.09.53:862][237]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.03.11-21.09.53:865][237]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.03.11-21.09.53:890][237]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.03.11-21.09.53:890][237]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.03.11-21.09.53:890][237]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.03.11-21.09.53:890][237]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.03.11-21.09.53:891][237]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2025.03.11-21.09.53:891][237]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2025.03.11-21.09.53:893][237]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2025.03.11-21.09.53:893][237]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2025.03.11-21.09.53:893][237]LogInit: FAudioDevice initialized with ID 5.
+[2025.03.11-21.09.53:893][237]LogAudio: Display: Audio Device (ID: 5) registered with world 'World_generator'.
+[2025.03.11-21.09.53:893][237]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2025.03.11-21.09.53:895][237]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2025.03.11-21.09.53:896][237]LogWorld: Bringing World /Game/MapGeneration/UEDPIE_0_World_generator.World_generator up for play (max tick rate 0) at 2025.03.11-21.09.53
+[2025.03.11-21.09.53:896][237]LogWorld: Bringing up level for play took: 0.000641
+[2025.03.11-21.09.53:898][237]LogOnline: OSS: Created online subsystem instance for: :Context_7
+[2025.03.11-21.09.53:909][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:909][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:920][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:920][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:930][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:930][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:940][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:940][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:950][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:950][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:960][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:960][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:970][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:971][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:982][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:982][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:993][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.53:993][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:003][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:003][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:014][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:014][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:024][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:024][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:038][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:039][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:049][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:049][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:059][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:059][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:070][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:070][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:080][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:080][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:090][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:090][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:100][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:100][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:110][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:110][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:121][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:121][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:131][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:131][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:141][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:141][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:151][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:151][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:161][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:161][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:170][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:170][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:180][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:180][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:190][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:191][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:201][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:201][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:211][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:211][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:221][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:221][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:231][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:231][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:241][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:241][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:251][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:251][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:261][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:261][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:271][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:271][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:281][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:281][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:291][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:291][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:301][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:301][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:311][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:311][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:321][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:321][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:331][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:331][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:341][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:341][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:351][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:351][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:360][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:360][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:370][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:370][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:380][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:380][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:390][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:390][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:400][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:400][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:410][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:410][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:420][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:420][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:430][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:430][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:440][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:440][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:450][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:450][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:460][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:460][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:470][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:470][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:480][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:480][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:490][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:490][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:500][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:500][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:510][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:510][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:520][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:520][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:531][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:531][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:541][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:541][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:551][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:551][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:561][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:561][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:571][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:571][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:581][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:581][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:591][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:591][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:601][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:601][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:611][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:611][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:621][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:621][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:631][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:632][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:641][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:642][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:651][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:651][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:661][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:661][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:671][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:671][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:681][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:681][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:691][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:691][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:701][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:701][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:711][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:711][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:721][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:721][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:731][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:731][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:740][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:740][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:750][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:750][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:760][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:760][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:770][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:770][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:780][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:780][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:790][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:790][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:800][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:800][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:810][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:810][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:820][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:820][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:830][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:831][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:841][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:841][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:851][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:851][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:861][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:861][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:871][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:872][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:882][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:882][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:892][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:892][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:902][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:902][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:912][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:912][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:922][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:922][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:932][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:933][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:943][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:943][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:953][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:953][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:963][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:963][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:973][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:973][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:983][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:983][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:993][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.54:993][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:003][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:003][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:014][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:014][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:024][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:024][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:034][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:034][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:044][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:044][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:054][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:054][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:064][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:064][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:074][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:074][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:084][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:084][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:095][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:095][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:105][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:105][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:115][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:115][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:125][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:125][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:134][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:134][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:145][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:145][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:155][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:155][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:165][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:165][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:175][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:175][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:185][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:185][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:195][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:195][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:205][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:205][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:216][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:216][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:226][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:226][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:236][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:236][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:246][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:246][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:258][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:258][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:268][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:268][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:278][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:278][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:288][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:288][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:298][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:298][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:308][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:309][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:319][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:319][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:329][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:329][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:339][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:339][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:349][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:349][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:359][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Create Mesh Section Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:359][237]PIE: Error: Blueprint Runtime Error: "Accessed None trying to read property TerrainMesh". Node:  Set Material Graph:  BP Generate Map Function:  BP Generate Map Blueprint:  BP_Map
+[2025.03.11-21.09.55:360][237]PIE: Server logged in
+[2025.03.11-21.09.55:360][237]PIE: Play in editor total start time 1.544 seconds.
+[2025.03.11-21.09.57:022][420]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.09.57:022][420]LogWorld: BeginTearingDown for /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.09.57:022][420]LogWorld: UWorld::CleanupWorld for World_generator, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.09.57:022][420]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.09.57:041][420]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.03.11-21.09.57:045][420]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.09.57:056][420]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.03.11-21.09.57:056][420]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2025.03.11-21.09.57:057][420]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.03.11-21.09.57:058][420]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.03.11-21.09.57:061][420]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.09.57:063][420]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2025.03.11-21.09.57:171][421]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2025.03.11-21.09.58:488][550]LogSlate: Window 'Message Log' being destroyed
+[2025.03.11-21.09.58:493][550]LogSlate: Window 'Message Log' being destroyed
+[2025.03.11-21.10.26:287][466]BlueprintLog: New page: Compile BP_Map
+[2025.03.11-21.10.26:341][466]LogActor: Warning: BP_Map_C /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_Map_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.03.11-21.10.26:342][466]LogNavigationDirtyArea: Warning: Skipping dirty area creation because of empty bounds (object: ProceduralMeshComponent /Game/MapGeneration/World_generator.World_generator:PersistentLevel.REINST_BP_Map_C_0.TerrainMeshBP, from: Remove from navoctree)
+[2025.03.11-21.10.26:342][466]LogNavigationDirtyArea: Warning: Skipping dirty area creation because of empty bounds (object: ProceduralMeshComponent /Game/MapGeneration/World_generator.World_generator:PersistentLevel.REINST_BP_Map_C_0.TerrainMesh, from: Remove from navoctree)
+[2025.03.11-21.10.26:354][466]LogActor: Warning: BP_Map_C /Engine/Transient.World_0:PersistentLevel.BP_Map_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.03.11-21.10.26:375][466]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2025.03.11-21.10.26:917][510]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.03.11-21.10.26:945][510]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MapGeneration/BP_Map" FILE="../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_Map.uasset" SILENT=true
+[2025.03.11-21.10.26:995][510]LogSavePackage: Moving output files for package: /Game/MapGeneration/BP_Map
+[2025.03.11-21.10.26:995][510]LogSavePackage: Moving '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Saved/BP_Map950F12EB48F2902A7127F58006385025.tmp' to '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_Map.uasset'
+[2025.03.11-21.10.27:002][510]LogFileHelpers: InternalPromptForCheckoutAndSave took 85 ms (total: 1.25 sec)
+[2025.03.11-21.10.27:004][510]AssetCheck: New page: Asset Save: BP_Map
+[2025.03.11-21.10.27:004][510]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/MapGeneration/BP_Map.BP_Map
+[2025.03.11-21.10.28:772][720]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.03.11-21.10.28:776][720]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.03.11-21.10.28:776][720]PIE: New page: PIE session: World_generator (11 Mar 2025, 21:10:28)
+[2025.03.11-21.10.28:822][720]LogPlayLevel: Creating play world package: /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.10.28:824][720]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001806s)
+[2025.03.11-21.10.28:824][720]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MapGeneration/World_generator.World_generator to /Game/MapGeneration/UEDPIE_0_World_generator.World_generator (0.001835s)
+[2025.03.11-21.10.28:836][720]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2025.03.11-21.10.28:838][720]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.11-21.10.28:838][720]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2025.03.11-21.10.28:838][720]LogAIModule: Creating AISystem for world World_generator
+[2025.03.11-21.10.28:838][720]LogPlayLevel: PIE: World Init took: (0.000778s)
+[2025.03.11-21.10.28:838][720]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.03.11-21.10.28:838][720]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.03.11-21.10.28:838][720]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.03.11-21.10.28:838][720]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.03.11-21.10.28:838][720]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.03.11-21.10.28:838][720]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.03.11-21.10.28:838][720]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.03.11-21.10.28:838][720]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.03.11-21.10.28:838][720]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.03.11-21.10.28:839][720]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.03.11-21.10.28:839][720]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.03.11-21.10.28:839][720]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.03.11-21.10.28:841][720]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.03.11-21.10.28:863][720]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.03.11-21.10.28:863][720]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.03.11-21.10.28:863][720]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.03.11-21.10.28:863][720]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.03.11-21.10.28:864][720]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.03.11-21.10.28:864][720]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2025.03.11-21.10.28:865][720]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.03.11-21.10.28:865][720]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.03.11-21.10.28:865][720]LogInit: FAudioDevice initialized with ID 6.
+[2025.03.11-21.10.28:866][720]LogAudio: Display: Audio Device (ID: 6) registered with world 'World_generator'.
+[2025.03.11-21.10.28:866][720]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.03.11-21.10.28:868][720]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2025.03.11-21.10.28:868][720]LogWorld: Bringing World /Game/MapGeneration/UEDPIE_0_World_generator.World_generator up for play (max tick rate 0) at 2025.03.11-21.10.28
+[2025.03.11-21.10.28:868][720]LogWorld: Bringing up level for play took: 0.000571
+[2025.03.11-21.10.28:870][720]LogOnline: OSS: Created online subsystem instance for: :Context_8
+[2025.03.11-21.10.34:036][720]PIE: Server logged in
+[2025.03.11-21.10.34:037][720]PIE: Play in editor total start time 5.261 seconds.
+[2025.03.11-21.10.37:552][ 57]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.10.37:552][ 57]LogWorld: BeginTearingDown for /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.10.37:552][ 57]LogWorld: UWorld::CleanupWorld for World_generator, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.10.37:552][ 57]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.10.37:567][ 57]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.03.11-21.10.37:571][ 57]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.10.37:582][ 57]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.03.11-21.10.37:582][ 57]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.03.11-21.10.37:582][ 57]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.03.11-21.10.37:583][ 57]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.03.11-21.10.37:587][ 57]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.10.37:589][ 57]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2025.03.11-21.10.37:637][ 58]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2025.03.11-21.11.20:582][752]BlueprintLog: New page: Compile BP_CWorldGenerator
+[2025.03.11-21.11.20:636][752]LogActor: Warning: BP_CWorldGenerator_C /Engine/Transient.World_2:PersistentLevel.BP_CWorldGenerator_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.03.11-21.11.20:656][752]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2025.03.11-21.11.38:996][504]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.03.11-21.11.39:017][504]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MapGeneration/BP_CWorldGenerator" FILE="../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_CWorldGenerator.uasset" SILENT=true
+[2025.03.11-21.11.39:065][504]LogSavePackage: Moving output files for package: /Game/MapGeneration/BP_CWorldGenerator
+[2025.03.11-21.11.39:065][504]LogSavePackage: Moving '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Saved/BP_CWorldGeneratorF0E2B280492EA140F5A8E18A78FAA41D.tmp' to '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_CWorldGenerator.uasset'
+[2025.03.11-21.11.39:071][504]LogFileHelpers: InternalPromptForCheckoutAndSave took 75 ms (total: 1.33 sec)
+[2025.03.11-21.11.39:073][504]AssetCheck: New page: Asset Save: BP_CWorldGenerator
+[2025.03.11-21.11.39:073][504]LogContentValidation: Display: Validating /Script/Engine.Blueprint /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator
+[2025.03.11-21.11.56:791][574]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator_C
+[2025.03.11-21.11.56:791][574]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator_C
+[2025.03.11-21.11.56:791][574]LogActor: Warning: BP_CWorldGenerator_C /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.03.11-21.11.56:791][574]LogActorFactory: Actor Factory spawned Blueprint /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator as actor: BP_CWorldGenerator_C /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_0
+[2025.03.11-21.11.56:792][574]LogActorFactory: Actor Factory spawned Blueprint /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator as actor: BP_CWorldGenerator_C /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_0
+[2025.03.11-21.11.56:795][574]LogActorFactory: Loading ActorFactory Class /Script/Engine.LevelInstance
+[2025.03.11-21.11.57:899][705]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator_C
+[2025.03.11-21.11.57:899][705]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator_C
+[2025.03.11-21.11.57:900][705]LogActor: Warning: BP_CWorldGenerator_C /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_1 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2025.03.11-21.11.57:900][705]LogActorFactory: Actor Factory spawned Blueprint /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator as actor: BP_CWorldGenerator_C /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_1
+[2025.03.11-21.11.57:900][705]LogActorFactory: Actor Factory spawned Blueprint /Game/MapGeneration/BP_CWorldGenerator.BP_CWorldGenerator as actor: BP_CWorldGenerator_C /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_1
+[2025.03.11-21.12.02:492][238]LogViewport: Scene viewport resized to 438x284, mode Windowed.
+[2025.03.11-21.12.10:215][149]LogNavigationDirtyArea: Warning: Skipping dirty area creation because of empty bounds (object: ProceduralMeshComponent /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_1.TerrainMesh, from: Remove from navoctree)
+[2025.03.11-21.12.11:065][251]LogNavigationDirtyArea: Warning: Skipping dirty area creation because of empty bounds (object: ProceduralMeshComponent /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_1.TerrainMesh, from: Remove from navoctree)
+[2025.03.11-21.12.14:329][615]LogNavigationDirtyArea: Warning: Skipping dirty area creation because of empty bounds (object: ProceduralMeshComponent /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_CWorldGenerator_C_1.TerrainMesh, from: Remove from navoctree)
+[2025.03.11-21.12.14:431][627]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.03.11-21.12.14:500][627]LogUObjectHash: Compacting FUObjectHashTables data took   1.52ms
+[2025.03.11-21.12.14:512][627]LogSavePackage: Moving output files for package: /Game/MapGeneration/World_generator
+[2025.03.11-21.12.14:512][627]LogSavePackage: Moving '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Saved/World_generatorD29388A04DDAA4F0DFEE19BE84A4A205.tmp' to '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/World_generator.umap'
+[2025.03.11-21.12.14:518][627]LogFileHelpers: Saving map 'World_generator' took 0.058
+[2025.03.11-21.12.14:525][627]LogFileHelpers: InternalPromptForCheckoutAndSave took 94 ms (total: 1.42 sec)
+[2025.03.11-21.12.14:527][627]AssetCheck: New page: Asset Save: World_generator
+[2025.03.11-21.12.14:527][627]LogContentValidation: Display: Validating /Script/Engine.World /Game/MapGeneration/World_generator.World_generator
+[2025.03.11-21.12.15:710][768]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.03.11-21.12.15:729][768]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.03.11-21.12.15:729][768]PIE: New page: PIE session: World_generator (11 Mar 2025, 21:12:15)
+[2025.03.11-21.12.15:729][768]LogPlayLevel: Creating play world package: /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.12.15:731][768]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001907s)
+[2025.03.11-21.12.15:731][768]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MapGeneration/World_generator.World_generator to /Game/MapGeneration/UEDPIE_0_World_generator.World_generator (0.001934s)
+[2025.03.11-21.12.15:743][768]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2025.03.11-21.12.15:744][768]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.11-21.12.15:744][768]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2025.03.11-21.12.15:745][768]LogAIModule: Creating AISystem for world World_generator
+[2025.03.11-21.12.15:745][768]LogPlayLevel: PIE: World Init took: (0.000771s)
+[2025.03.11-21.12.15:745][768]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2025.03.11-21.12.15:745][768]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.03.11-21.12.15:745][768]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.03.11-21.12.15:745][768]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.03.11-21.12.15:745][768]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.03.11-21.12.15:745][768]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.03.11-21.12.15:745][768]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.03.11-21.12.15:745][768]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.03.11-21.12.15:745][768]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.03.11-21.12.15:746][768]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.03.11-21.12.15:746][768]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.03.11-21.12.15:746][768]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.03.11-21.12.15:747][768]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.03.11-21.12.15:769][768]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.03.11-21.12.15:770][768]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.03.11-21.12.15:770][768]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.03.11-21.12.15:770][768]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.03.11-21.12.15:770][768]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2025.03.11-21.12.15:770][768]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2025.03.11-21.12.15:772][768]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2025.03.11-21.12.15:772][768]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2025.03.11-21.12.15:772][768]LogInit: FAudioDevice initialized with ID 7.
+[2025.03.11-21.12.15:772][768]LogAudio: Display: Audio Device (ID: 7) registered with world 'World_generator'.
+[2025.03.11-21.12.15:772][768]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2025.03.11-21.12.15:774][768]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2025.03.11-21.12.15:775][768]LogWorld: Bringing World /Game/MapGeneration/UEDPIE_0_World_generator.World_generator up for play (max tick rate 0) at 2025.03.11-21.12.15
+[2025.03.11-21.12.15:775][768]LogWorld: Bringing up level for play took: 0.000656
+[2025.03.11-21.12.15:777][768]LogOnline: OSS: Created online subsystem instance for: :Context_9
+[2025.03.11-21.12.21:480][768]PIE: Server logged in
+[2025.03.11-21.12.21:480][768]PIE: Play in editor total start time 5.765 seconds.
+[2025.03.11-21.12.25:882][229]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.12.25:882][229]LogWorld: BeginTearingDown for /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.12.25:882][229]LogWorld: UWorld::CleanupWorld for World_generator, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.12.25:882][229]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.12.25:900][229]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.03.11-21.12.25:904][229]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.12.25:915][229]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.12.25:915][229]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2025.03.11-21.12.25:916][229]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.03.11-21.12.25:917][229]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.03.11-21.12.25:923][229]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2025.03.11-21.12.25:987][230]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2025.03.11-21.12.34:274][127]Cmd: DELETE
+[2025.03.11-21.12.34:274][127]Cmd: ACTOR DELETE
+[2025.03.11-21.12.34:276][127]LogEditorActor: Deleted Actor: BP_Map_C
+[2025.03.11-21.12.34:276][127]LogNavigationDirtyArea: Warning: Skipping dirty area creation because of empty bounds (object: ProceduralMeshComponent /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_Map_C_1.TerrainMesh, from: Remove from navoctree)
+[2025.03.11-21.12.34:276][127]LogNavigationDirtyArea: Warning: Skipping dirty area creation because of empty bounds (object: ProceduralMeshComponent /Game/MapGeneration/World_generator.World_generator:PersistentLevel.BP_Map_C_1.TerrainMeshBP, from: Remove from navoctree)
+[2025.03.11-21.12.34:289][127]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.03.11-21.12.34:291][127]LogEditorActor: Deleted 1 Actors (0.017 secs)
+[2025.03.11-21.12.36:258][360]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.03.11-21.12.36:310][360]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2025.03.11-21.12.36:318][360]LogSavePackage: Moving output files for package: /Game/MapGeneration/World_generator
+[2025.03.11-21.12.36:318][360]LogSavePackage: Moving '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Saved/World_generatorD988BEA84E3D631948EF4E8B4890D2D5.tmp' to '../../../../../../CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/World_generator.umap'
+[2025.03.11-21.12.36:324][360]LogFileHelpers: Saving map 'World_generator' took 0.047
+[2025.03.11-21.12.36:328][360]LogFileHelpers: InternalPromptForCheckoutAndSave took 70 ms (total: 1.49 sec)
+[2025.03.11-21.12.36:329][360]AssetCheck: New page: Asset Save: World_generator
+[2025.03.11-21.12.36:329][360]LogContentValidation: Display: Validating /Script/Engine.World /Game/MapGeneration/World_generator.World_generator
+[2025.03.11-21.12.37:189][463]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.03.11-21.12.37:194][463]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.03.11-21.12.37:194][463]PIE: New page: PIE session: World_generator (11 Mar 2025, 21:12:37)
+[2025.03.11-21.12.37:222][463]LogPlayLevel: Creating play world package: /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.12.37:224][463]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001771s)
+[2025.03.11-21.12.37:224][463]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MapGeneration/World_generator.World_generator to /Game/MapGeneration/UEDPIE_0_World_generator.World_generator (0.001802s)
+[2025.03.11-21.12.37:236][463]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2025.03.11-21.12.37:236][463]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.11-21.12.37:236][463]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2025.03.11-21.12.37:237][463]LogAIModule: Creating AISystem for world World_generator
+[2025.03.11-21.12.37:237][463]LogPlayLevel: PIE: World Init took: (0.000694s)
+[2025.03.11-21.12.37:237][463]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2025.03.11-21.12.37:237][463]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.03.11-21.12.37:237][463]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.03.11-21.12.37:237][463]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.03.11-21.12.37:237][463]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.03.11-21.12.37:237][463]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.03.11-21.12.37:237][463]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.03.11-21.12.37:237][463]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.03.11-21.12.37:237][463]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.03.11-21.12.37:238][463]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.03.11-21.12.37:238][463]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.03.11-21.12.37:238][463]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.03.11-21.12.37:239][463]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.03.11-21.12.37:261][463]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.03.11-21.12.37:261][463]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.03.11-21.12.37:261][463]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.03.11-21.12.37:261][463]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.03.11-21.12.37:262][463]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2025.03.11-21.12.37:262][463]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2025.03.11-21.12.37:264][463]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2025.03.11-21.12.37:264][463]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2025.03.11-21.12.37:264][463]LogInit: FAudioDevice initialized with ID 8.
+[2025.03.11-21.12.37:264][463]LogAudio: Display: Audio Device (ID: 8) registered with world 'World_generator'.
+[2025.03.11-21.12.37:264][463]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 8
+[2025.03.11-21.12.37:266][463]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2025.03.11-21.12.37:266][463]LogWorld: Bringing World /Game/MapGeneration/UEDPIE_0_World_generator.World_generator up for play (max tick rate 0) at 2025.03.11-21.12.37
+[2025.03.11-21.12.37:266][463]LogWorld: Bringing up level for play took: 0.000542
+[2025.03.11-21.12.37:268][463]LogOnline: OSS: Created online subsystem instance for: :Context_10
+[2025.03.11-21.12.37:909][463]PIE: Server logged in
+[2025.03.11-21.12.37:910][463]PIE: Play in editor total start time 0.716 seconds.
+[2025.03.11-21.12.48:702][329]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.12.48:702][329]LogWorld: BeginTearingDown for /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.12.48:702][329]LogWorld: UWorld::CleanupWorld for World_generator, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.12.48:702][329]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.12.48:707][329]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.03.11-21.12.48:711][329]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.12.48:720][329]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.12.48:720][329]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 8
+[2025.03.11-21.12.48:720][329]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2025.03.11-21.12.48:722][329]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2025.03.11-21.12.48:728][329]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2025.03.11-21.12.48:762][332]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2025.03.11-21.20.45:424][486]LogViewport: Scene viewport resized to 438x284, mode Windowed.
+[2025.03.11-21.20.53:001][232]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.20.53:001][232]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.21.19:940][134]LogLiveCoding: Display: Starting Live Coding compile.
+[2025.03.11-21.21.42:367][503]LogDerivedDataCache: C:/Users/pss99/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:01:02.214 and deleted 5 files with total size 0 MiB and 5 empty folders. Scanned 23356 files in 25583 folders with total size 7618 MiB.
+[2025.03.11-21.21.46:918][516]LogLiveCoding: Display:    Creating library C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Binaries\Win64\UnrealEditor-CCTP_Project-Win64-DebugGame.patch_1.lib and object C:\CCPT\CCPT_TerrainGenerator\CCTP_Project 5.3\Binaries\Win64\UnrealEditor-CCTP_Project-Win64-DebugGame.patch_1.exp
+[2025.03.11-21.21.48:717][520]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2025.03.11-21.21.49:193][521]Display: Reload/Re-instancing Complete: No object changes detected
+[2025.03.11-21.21.49:193][521]LogLiveCoding: Display: Live coding succeeded
+[2025.03.11-21.21.57:540][471]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.03.11-21.22.05:633][471]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.03.11-21.22.05:633][471]PIE: New page: PIE session: World_generator (11 Mar 2025, 21:22:05)
+[2025.03.11-21.22.05:672][471]LogPlayLevel: Creating play world package: /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.22.05:674][471]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001969s)
+[2025.03.11-21.22.05:674][471]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MapGeneration/World_generator.World_generator to /Game/MapGeneration/UEDPIE_0_World_generator.World_generator (0.002005s)
+[2025.03.11-21.22.05:770][471]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2025.03.11-21.22.05:771][471]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.11-21.22.05:771][471]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2025.03.11-21.22.05:771][471]LogAIModule: Creating AISystem for world World_generator
+[2025.03.11-21.22.05:772][471]LogPlayLevel: PIE: World Init took: (0.000892s)
+[2025.03.11-21.22.05:772][471]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2025.03.11-21.22.05:772][471]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.03.11-21.22.05:772][471]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.03.11-21.22.05:772][471]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.03.11-21.22.05:772][471]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.03.11-21.22.05:772][471]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.03.11-21.22.05:772][471]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.03.11-21.22.05:772][471]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.03.11-21.22.05:772][471]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.03.11-21.22.05:772][471]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.03.11-21.22.05:772][471]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.03.11-21.22.05:772][471]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.03.11-21.22.05:775][471]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.03.11-21.22.05:800][471]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.03.11-21.22.05:800][471]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.03.11-21.22.05:800][471]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.03.11-21.22.05:800][471]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.03.11-21.22.05:800][471]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=9
+[2025.03.11-21.22.05:800][471]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=9
+[2025.03.11-21.22.05:802][471]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=9
+[2025.03.11-21.22.05:802][471]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=9
+[2025.03.11-21.22.05:802][471]LogInit: FAudioDevice initialized with ID 9.
+[2025.03.11-21.22.05:802][471]LogAudio: Display: Audio Device (ID: 9) registered with world 'World_generator'.
+[2025.03.11-21.22.05:802][471]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 9
+[2025.03.11-21.22.05:805][471]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2025.03.11-21.22.05:806][471]LogWorld: Bringing World /Game/MapGeneration/UEDPIE_0_World_generator.World_generator up for play (max tick rate 0) at 2025.03.11-21.22.05
+[2025.03.11-21.22.05:806][471]LogWorld: Bringing up level for play took: 0.000647
+[2025.03.11-21.22.05:808][471]LogOnline: OSS: Created online subsystem instance for: :Context_11
+[2025.03.11-21.22.06:478][471]PIE: Server logged in
+[2025.03.11-21.22.06:479][471]PIE: Play in editor total start time 0.847 seconds.
+[2025.03.11-21.22.08:792][714]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.22.08:792][714]LogWorld: BeginTearingDown for /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.22.08:792][714]LogWorld: UWorld::CleanupWorld for World_generator, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.22.08:792][714]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.22.08:806][714]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.03.11-21.22.08:810][714]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.22.08:821][714]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.22.08:823][714]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 9
+[2025.03.11-21.22.08:823][714]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2025.03.11-21.22.08:825][714]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2025.03.11-21.22.08:857][714]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2025.03.11-21.22.08:926][715]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2025.03.11-21.22.08:997][716]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.11-21.22.12:730][154]Cmd: SELECT NONE
+[2025.03.11-21.22.13:910][275]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.03.11-21.22.13:915][275]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.03.11-21.22.13:915][275]PIE: New page: PIE session: World_generator (11 Mar 2025, 21:22:13)
+[2025.03.11-21.22.13:952][275]LogPlayLevel: Creating play world package: /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.22.13:954][275]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001928s)
+[2025.03.11-21.22.13:954][275]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MapGeneration/World_generator.World_generator to /Game/MapGeneration/UEDPIE_0_World_generator.World_generator (0.001960s)
+[2025.03.11-21.22.13:968][275]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
+[2025.03.11-21.22.13:973][275]LogWorldSubsystemInput: UEnhancedInputDeveloperSettings::bEnableWorldSubsystem is false, the world subsystem will not be created!
+[2025.03.11-21.22.13:973][275]LogChaos: FPhysicsSolverBase::AsyncDt:-1.000000
+[2025.03.11-21.22.13:973][275]LogAIModule: Creating AISystem for world World_generator
+[2025.03.11-21.22.13:973][275]LogPlayLevel: PIE: World Init took: (0.001032s)
+[2025.03.11-21.22.13:973][275]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2025.03.11-21.22.13:973][275]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.03.11-21.22.13:973][275]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.03.11-21.22.13:973][275]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.03.11-21.22.13:974][275]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.03.11-21.22.13:974][275]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.03.11-21.22.13:974][275]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.03.11-21.22.13:974][275]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.03.11-21.22.13:974][275]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.03.11-21.22.13:974][275]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.03.11-21.22.13:974][275]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.03.11-21.22.13:974][275]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.03.11-21.22.13:976][275]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.03.11-21.22.13:997][275]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.03.11-21.22.13:998][275]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.03.11-21.22.13:998][275]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.03.11-21.22.13:998][275]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.03.11-21.22.13:998][275]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2025.03.11-21.22.13:998][275]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2025.03.11-21.22.14:000][275]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2025.03.11-21.22.14:000][275]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2025.03.11-21.22.14:000][275]LogInit: FAudioDevice initialized with ID 10.
+[2025.03.11-21.22.14:000][275]LogAudio: Display: Audio Device (ID: 10) registered with world 'World_generator'.
+[2025.03.11-21.22.14:000][275]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2025.03.11-21.22.14:002][275]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2025.03.11-21.22.14:003][275]LogWorld: Bringing World /Game/MapGeneration/UEDPIE_0_World_generator.World_generator up for play (max tick rate 0) at 2025.03.11-21.22.14
+[2025.03.11-21.22.14:003][275]LogWorld: Bringing up level for play took: 0.000594
+[2025.03.11-21.22.14:005][275]LogOnline: OSS: Created online subsystem instance for: :Context_13
+[2025.03.11-21.22.14:661][275]PIE: Server logged in
+[2025.03.11-21.22.14:661][275]PIE: Play in editor total start time 0.747 seconds.
+[2025.03.11-21.22.19:862][878]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.22.19:862][878]LogWorld: BeginTearingDown for /Game/MapGeneration/UEDPIE_0_World_generator
+[2025.03.11-21.22.19:862][878]LogWorld: UWorld::CleanupWorld for World_generator, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.22.19:862][878]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.22.19:867][878]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.03.11-21.22.19:870][878]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.22.19:883][878]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.03.11-21.22.19:883][878]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2025.03.11-21.22.19:883][878]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2025.03.11-21.22.19:885][878]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2025.03.11-21.22.19:894][878]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2025.03.11-21.22.19:948][880]LogPlayLevel: Display: Destroying online subsystem :Context_13
+[2025.03.11-21.22.34:039][139]LogSlate: Window 'BP_CWorldGenerator' being destroyed
+[2025.03.11-21.22.34:043][139]LogSlate: Window 'BP_CWorldGenerator' being destroyed
+[2025.03.11-21.22.34:046][139]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2025.03.11-21.22.34:046][139]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2025.03.11-21.22.34:046][139]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.03.11-21.22.37:161][296]LogSlate: Window 'Content Browser' being destroyed
+[2025.03.11-21.22.37:162][296]LogSlate: Window 'Content Browser' being destroyed
