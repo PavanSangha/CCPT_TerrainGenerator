@@ -8,7 +8,8 @@
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/World_generator.umap",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_Map.uasset",
-				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/material/M_automatic_Inst.uasset"
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/material/M_automatic_Inst.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_CWorldGenerator.uasset"
 			]
 		}
 	]

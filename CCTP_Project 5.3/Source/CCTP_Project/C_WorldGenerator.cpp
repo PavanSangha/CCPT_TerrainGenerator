@@ -8,7 +8,7 @@ AC_WorldGenerator::AC_WorldGenerator()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-    TerrainMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("Terrain Mesh"));
+    TerrainMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("TerrainMesh"));
 	TerrainMesh->SetupAttachment(GetRootComponent());
 	
 }
@@ -17,10 +17,11 @@ AC_WorldGenerator::AC_WorldGenerator()
 void AC_WorldGenerator::BeginPlay()
 {
 	
-	
-	
 	Super::BeginPlay();
-	
+
+	//TerrainMesh->CreateMeshSection(TArray<FVector>(), TArray<FVector2D>(), TArray<FColor>(), TArray<FProcMeshTangent>(), true);
+
+
 }
 
 // Called every frame
