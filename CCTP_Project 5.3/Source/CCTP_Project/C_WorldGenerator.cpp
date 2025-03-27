@@ -31,9 +31,14 @@ void AC_WorldGenerator::Tick(float DeltaTime)
 
 }
 
-void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIndexY)
+
+
+
+
+
+void AC_WorldGenerator::GenerateMap(const int InSectionIndexX, const int InSectionIndexY)
 {
-	FVector Offet = FVector(SectionIndexX * (XVertexCount - 1), SectionIndexY * (YvertexCount - 1), 0.f) * CellSize;
+	FVector Offet = FVector(InSectionIndexX * (XVertexCount - 1), InSectionIndexY * (YvertexCount - 1), 0.f) * CellSize;
 
 	TArray<FVector>Vertices;
 	FVector Vertex;
@@ -54,8 +59,8 @@ void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIn
 			Vertex.Z = GetHeight(FVector2D(Vertex.X, Vertex.Y));
 			Vertices.Add(Vertex);
 			//UVs
-			UV.X = (iVertX + (SectionIndexX * (XVertexCount - 1))) * CellSize / 100;
-			UV.Y = (iVertY + (SectionIndexY * (YvertexCount - 1))) * CellSize / 100;
+			UV.X = (iVertX + (InSectionIndexX * (XVertexCount - 1))) * CellSize / 100;
+			UV.Y = (iVertY + (InSectionIndexY * (YvertexCount - 1))) * CellSize / 100;
 			UVs.Add(UV);
 		}
 
@@ -81,11 +86,11 @@ void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIn
 	}
 	//calculate subsection mesh to stop seams
 
-	TArray<FVector>SSVertices;
-	TArray<FVector2D> SSUVs;
-	TArray<int32>SSTriangles;
-	TArray<FVector> SSNormals;
-	TArray<FProcMeshTangent> SSTangents;
+	//TArray<FVector>SSVertices;
+	//TArray<FVector2D> SSUVs;
+	//TArray<int32>SSTriangles;
+	//TArray<FVector> SSNormals;
+	//TArray<FProcMeshTangent> SSTangents;
 
 	int VertexIndex = 0;
 
@@ -109,40 +114,38 @@ void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIn
 		}
 	}
 	//Subsection Triangles
-	for (int32 iTriangleY = 0; iTriangleY <= YvertexCount - 2; iTriangleY++)
+	if (SSTriangles.Num()== 0)
 	{
 
-		for (int32 iTriangleX = 0; iTriangleX <= XVertexCount - 2; iTriangleX++)
+		for (int32 iTriangleY = 0; iTriangleY <= YvertexCount - 2; iTriangleY++)
 		{
-			SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount);
-			SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + XVertexCount);
-			SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + 1);
 
-			SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + XVertexCount);
-			SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + XVertexCount + 1);
-			SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + 1);
+			for (int32 iTriangleX = 0; iTriangleX <= XVertexCount - 2; iTriangleX++)
+			{
+				SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount);
+				SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + XVertexCount);
+				SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + 1);
+
+				SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + XVertexCount);
+				SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + XVertexCount + 1);
+				SSTriangles.Add(iTriangleX + iTriangleY * XVertexCount + 1);
 
 
 
 
+			}
 		}
 	}
-
-	//create mesh section
-
-	TerrainMesh->CreateMeshSection(MeshSectionIndex, SSVertices, SSTriangles, SSNormals, SSUVs, TArray<FColor>(), SSTangents, true);
-	if (TerrainMaterial)
-	{
-		TerrainMesh->SetMaterial(MeshSectionIndex, TerrainMaterial);
-	}
-	MeshSectionIndex++;
+	TileDataReady = true;
 }
 
+
+// Change Perlin Noise Height of generated terrain 
 float AC_WorldGenerator::GetHeight(FVector2D Location)
 {
 	return PerlinNoiseWide(Location,.00001f, 20000,FVector2D(.1f)) + 
-		PerlinNoiseWide(Location, .0001f, 7500, FVector2D(.2f)) + 
-		PerlinNoiseWide(Location, .001f, 700, FVector2D(.3f))+
+		PerlinNoiseWide(Location, .0001f, 2500, FVector2D(.2f)) + 
+		PerlinNoiseWide(Location, .001f, 400, FVector2D(.3f))+
 		PerlinNoiseWide(Location, .01f, 200, FVector2D(.4f));
 }
 
@@ -151,3 +154,53 @@ float AC_WorldGenerator::PerlinNoiseWide(const FVector2D Location, const float S
 	return FMath::PerlinNoise2D(Location*Scale+ FVector2D(.1f, .1f)+Offset)*Amplitude ;
 }
 
+void AC_WorldGenerator::GenerateTerrainAsync(const int InSectionIndexX, const int InSectionIndexY)
+{
+
+	GeneratorBusy = true;
+	SectionIndexX = InSectionIndexX;
+	SectionIndexY = InSectionIndexY;
+	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [&]()
+		{
+			auto WorldGenerateTask = new FAsyncTask <FAsyncWorldMapGenerator>(this);
+			WorldGenerateTask->StartBackgroundTask();
+			WorldGenerateTask->EnsureCompletion();
+			delete WorldGenerateTask;
+
+		}
+	);
+
+
+}
+
+void AC_WorldGenerator::DrawTile()
+{
+	TileDataReady = false;
+	
+	//create mesh section
+
+	TerrainMesh->CreateMeshSection(MeshSectionIndex, SSVertices, SSTriangles, SSNormals, SSUVs, TArray<FColor>(), SSTangents, true);
+	if (TerrainMaterial)
+	{
+		TerrainMesh->SetMaterial(MeshSectionIndex, TerrainMaterial);
+	}
+	MeshSectionIndex++;
+
+	SSVertices.Empty();
+	SSNormals.Empty();
+	SSNormals.Empty();
+	SSUVs.Empty();
+	SSTangents.Empty();
+
+
+	GeneratorBusy = false;
+
+
+}
+
+
+
+void FAsyncWorldMapGenerator::DoWork()
+{
+	WorldGenerator->GenerateMap(WorldGenerator->SectionIndexX, WorldGenerator->SectionIndexY);
+}

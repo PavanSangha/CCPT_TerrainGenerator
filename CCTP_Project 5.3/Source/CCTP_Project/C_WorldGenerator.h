@@ -44,6 +44,24 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UMaterialInterface* TerrainMaterial = nullptr;
 
+
+	UPROPERTY(BlueprintReadOnly)
+	bool GeneratorBusy = false;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool TileDataReady = false;
+
+
+	int SectionIndexX = 0;
+	int SectionIndexY = 0;
+
+	//Mesh data
+	TArray<FVector> SSVertices;
+	TArray<FVector> SSNormals;
+	TArray<FVector2D> SSUVs;
+	TArray<int32> SSTriangles;
+	TArray<FProcMeshTangent>SSTangents;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -54,9 +72,38 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable)
-	void GenerateMap(const int SectionIndexX, const int SectionIndexY);
+	void GenerateMap(const int InSectionIndexX, const int InSectionIndexY);
 
 	float GetHeight(const FVector2D Location);
 	float PerlinNoiseWide(const FVector2D Location, const float Scale, const float Amplitude, const FVector2D Offset );
+
+
+	UFUNCTION(BlueprintCallable)
+	void GenerateTerrainAsync(const int InSectionIndexX, const int InSectionIndexY);
+
+	UFUNCTION(BlueprintCallable)
+	void DrawTile();
+
+};
+
+
+class FAsyncWorldMapGenerator : public FNonAbandonableTask {
+
+public:
+
+	FAsyncWorldMapGenerator(AC_WorldGenerator* InworldGenerator) : WorldGenerator(InworldGenerator) {
+
+	}
+
+	FORCEINLINE TStatId GetStatId()const
+	{
+		RETURN_QUICK_DECLARE_CYCLE_STAT(FAsyncWorldMapGenerator, STATGROUP_ThreadPoolAsyncTasks);
+	}
+
+	void DoWork();
+
+private:
+
+	AC_WorldGenerator* WorldGenerator;
 
 };
