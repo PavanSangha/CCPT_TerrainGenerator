@@ -51,7 +51,7 @@ void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIn
 			//vertex calcultion
 			Vertex.X = iVertX * CellSize + Offet.X;
 			Vertex.Y = iVertY * CellSize + Offet.Y;
-			Vertex.Z = 0.f;
+			Vertex.Z = GetHeight(FVector2D(Vertex.X, Vertex.Y));
 			Vertices.Add(Vertex);
 			//UVs
 			UV.X = (iVertX + (SectionIndexX * (XVertexCount - 1))) * CellSize / 100;
@@ -140,6 +140,14 @@ void AC_WorldGenerator::GenerateMap(const int SectionIndexX, const int SectionIn
 
 float AC_WorldGenerator::GetHeight(FVector2D Location)
 {
-	return 0.0f;
+	return PerlinNoiseWide(Location,.00001f, 20000,FVector2D(.1f)) + 
+		PerlinNoiseWide(Location, .0001f, 7500, FVector2D(.2f)) + 
+		PerlinNoiseWide(Location, .001f, 700, FVector2D(.3f))+
+		PerlinNoiseWide(Location, .01f, 200, FVector2D(.4f));
+}
+
+float AC_WorldGenerator::PerlinNoiseWide(const FVector2D Location, const float Scale, const float Amplitude, const FVector2D Offset)
+{
+	return FMath::PerlinNoise2D(Location*Scale+ FVector2D(.1f, .1f)+Offset)*Amplitude ;
 }
 

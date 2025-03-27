@@ -56,6 +56,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void GenerateMap(const int SectionIndexX, const int SectionIndexY);
 
-	float GetHeight(FVector2D Location);
+	float GetHeight(const FVector2D Location);
+	float PerlinNoiseWide(const FVector2D Location, const float Scale, const float Amplitude, const FVector2D Offset );
 
 };
