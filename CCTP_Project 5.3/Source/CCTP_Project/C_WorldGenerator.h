@@ -51,6 +51,9 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	bool TileDataReady = false;
 
+	UPROPERTY(BlueprintReadWrite)
+	TMap<FIntPoint, int> ListedTiles;
+
 
 	int SectionIndexX = 0;
 	int SectionIndexY = 0;
@@ -83,6 +86,16 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void DrawTile();
+
+	UFUNCTION(BlueprintCallable)
+	FVector GetPlayerLocation();
+
+	UFUNCTION(BlueprintCallable)
+	FVector2D GetTileLocation(FIntPoint TileCoordinate);
+
+	UFUNCTION(BlueprintCallable)
+	FIntPoint GetClosestListedTile();
+
 
 };
 

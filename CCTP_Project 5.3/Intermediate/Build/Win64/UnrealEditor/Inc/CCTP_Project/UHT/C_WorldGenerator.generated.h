@@ -19,6 +19,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_CCPT_CCPT_TerrainGenerator_CCTP_Project_5_3_Source_CCTP_Project_C_WorldGenerator_h_13_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_CCPT_CCPT_TerrainGenerator_CCTP_Project_5_3_Source_CCTP_Project_C_WorldGenerator_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
  \
+	DECLARE_FUNCTION(execGetClosestListedTile); \
+	DECLARE_FUNCTION(execGetTileLocation); \
+	DECLARE_FUNCTION(execGetPlayerLocation); \
 	DECLARE_FUNCTION(execDrawTile); \
 	DECLARE_FUNCTION(execGenerateTerrainAsync); \
 	DECLARE_FUNCTION(execGenerateMap);

@@ -11,11 +11,36 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 // Cross Module References
 	CCTP_PROJECT_API UClass* Z_Construct_UClass_AC_WorldGenerator();
 	CCTP_PROJECT_API UClass* Z_Construct_UClass_AC_WorldGenerator_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FIntPoint();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
 	PROCEDURALMESHCOMPONENT_API UClass* Z_Construct_UClass_UProceduralMeshComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_CCTP_Project();
 // End Cross Module References
+	DEFINE_FUNCTION(AC_WorldGenerator::execGetClosestListedTile)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FIntPoint*)Z_Param__Result=P_THIS->GetClosestListedTile();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AC_WorldGenerator::execGetTileLocation)
+	{
+		P_GET_STRUCT(FIntPoint,Z_Param_TileCoordinate);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector2D*)Z_Param__Result=P_THIS->GetTileLocation(Z_Param_TileCoordinate);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(AC_WorldGenerator::execGetPlayerLocation)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(FVector*)Z_Param__Result=P_THIS->GetPlayerLocation();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(AC_WorldGenerator::execDrawTile)
 	{
 		P_FINISH;
@@ -48,6 +73,9 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 			{ "DrawTile", &AC_WorldGenerator::execDrawTile },
 			{ "GenerateMap", &AC_WorldGenerator::execGenerateMap },
 			{ "GenerateTerrainAsync", &AC_WorldGenerator::execGenerateTerrainAsync },
+			{ "GetClosestListedTile", &AC_WorldGenerator::execGetClosestListedTile },
+			{ "GetPlayerLocation", &AC_WorldGenerator::execGetPlayerLocation },
+			{ "GetTileLocation", &AC_WorldGenerator::execGetTileLocation },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -181,6 +209,112 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics
+	{
+		struct C_WorldGenerator_eventGetClosestListedTile_Parms
+		{
+			FIntPoint ReturnValue;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(C_WorldGenerator_eventGetClosestListedTile_Parms, ReturnValue), Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "C_WorldGenerator.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AC_WorldGenerator, nullptr, "GetClosestListedTile", nullptr, nullptr, Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::PropPointers), sizeof(Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::C_WorldGenerator_eventGetClosestListedTile_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::Function_MetaDataParams), Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::C_WorldGenerator_eventGetClosestListedTile_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics
+	{
+		struct C_WorldGenerator_eventGetPlayerLocation_Parms
+		{
+			FVector ReturnValue;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(C_WorldGenerator_eventGetPlayerLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "C_WorldGenerator.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AC_WorldGenerator, nullptr, "GetPlayerLocation", nullptr, nullptr, Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::PropPointers), sizeof(Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::C_WorldGenerator_eventGetPlayerLocation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::Function_MetaDataParams), Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::C_WorldGenerator_eventGetPlayerLocation_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics
+	{
+		struct C_WorldGenerator_eventGetTileLocation_Parms
+		{
+			FIntPoint TileCoordinate;
+			FVector2D ReturnValue;
+		};
+		static const UECodeGen_Private::FStructPropertyParams NewProp_TileCoordinate;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::NewProp_TileCoordinate = { "TileCoordinate", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(C_WorldGenerator_eventGetTileLocation_Parms, TileCoordinate), Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(C_WorldGenerator_eventGetTileLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::NewProp_TileCoordinate,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "C_WorldGenerator.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AC_WorldGenerator, nullptr, "GetTileLocation", nullptr, nullptr, Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::PropPointers), sizeof(Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::C_WorldGenerator_eventGetTileLocation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04820401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::Function_MetaDataParams), Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::PropPointers) < 2048);
+	static_assert(sizeof(Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::C_WorldGenerator_eventGetTileLocation_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AC_WorldGenerator);
 	UClass* Z_Construct_UClass_AC_WorldGenerator_NoRegister()
 	{
@@ -235,6 +369,12 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 #endif
 		static void NewProp_TileDataReady_SetBit(void* Obj);
 		static const UECodeGen_Private::FBoolPropertyParams NewProp_TileDataReady;
+		static const UECodeGen_Private::FIntPropertyParams NewProp_ListedTiles_ValueProp;
+		static const UECodeGen_Private::FStructPropertyParams NewProp_ListedTiles_Key_KeyProp;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ListedTiles_MetaData[];
+#endif
+		static const UECodeGen_Private::FMapPropertyParams NewProp_ListedTiles;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -248,6 +388,9 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 		{ &Z_Construct_UFunction_AC_WorldGenerator_DrawTile, "DrawTile" }, // 2529216833
 		{ &Z_Construct_UFunction_AC_WorldGenerator_GenerateMap, "GenerateMap" }, // 4203488649
 		{ &Z_Construct_UFunction_AC_WorldGenerator_GenerateTerrainAsync, "GenerateTerrainAsync" }, // 166876179
+		{ &Z_Construct_UFunction_AC_WorldGenerator_GetClosestListedTile, "GetClosestListedTile" }, // 2392012632
+		{ &Z_Construct_UFunction_AC_WorldGenerator_GetPlayerLocation, "GetPlayerLocation" }, // 1247613280
+		{ &Z_Construct_UFunction_AC_WorldGenerator_GetTileLocation, "GetTileLocation" }, // 3877631694
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AC_WorldGenerator_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
@@ -335,6 +478,15 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 		((AC_WorldGenerator*)Obj)->TileDataReady = 1;
 	}
 	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_TileDataReady = { "TileDataReady", nullptr, (EPropertyFlags)0x0010000000000014, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AC_WorldGenerator), &Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_TileDataReady_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_TileDataReady_MetaData), Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_TileDataReady_MetaData) };
+	const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles_ValueProp = { "ListedTiles", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 1, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles_Key_KeyProp = { "ListedTiles_Key", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FIntPoint, METADATA_PARAMS(0, nullptr) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles_MetaData[] = {
+		{ "Category", "C_WorldGenerator" },
+		{ "ModuleRelativePath", "C_WorldGenerator.h" },
+	};
+#endif
+	const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles = { "ListedTiles", nullptr, (EPropertyFlags)0x0010000000000004, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AC_WorldGenerator, ListedTiles), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles_MetaData), Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles_MetaData) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AC_WorldGenerator_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_XVertexCount,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_YvertexCount,
@@ -346,6 +498,9 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_TerrainMaterial,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_GeneratorBusy,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_TileDataReady,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles_ValueProp,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles_Key_KeyProp,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AC_WorldGenerator_Statics::NewProp_ListedTiles,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AC_WorldGenerator_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AC_WorldGenerator>::IsAbstract,
@@ -385,9 +540,9 @@ void EmptyLinkFunctionForGeneratedCodeC_WorldGenerator() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CCPT_CCPT_TerrainGenerator_CCTP_Project_5_3_Source_CCTP_Project_C_WorldGenerator_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AC_WorldGenerator, AC_WorldGenerator::StaticClass, TEXT("AC_WorldGenerator"), &Z_Registration_Info_UClass_AC_WorldGenerator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AC_WorldGenerator), 3461503707U) },
+		{ Z_Construct_UClass_AC_WorldGenerator, AC_WorldGenerator::StaticClass, TEXT("AC_WorldGenerator"), &Z_Registration_Info_UClass_AC_WorldGenerator, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AC_WorldGenerator), 4060337499U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CCPT_CCPT_TerrainGenerator_CCTP_Project_5_3_Source_CCTP_Project_C_WorldGenerator_h_2516733598(TEXT("/Script/CCTP_Project"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_CCPT_CCPT_TerrainGenerator_CCTP_Project_5_3_Source_CCTP_Project_C_WorldGenerator_h_3921806508(TEXT("/Script/CCTP_Project"),
 		Z_CompiledInDeferFile_FID_CCPT_CCPT_TerrainGenerator_CCTP_Project_5_3_Source_CCTP_Project_C_WorldGenerator_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_CCPT_CCPT_TerrainGenerator_CCTP_Project_5_3_Source_CCTP_Project_C_WorldGenerator_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

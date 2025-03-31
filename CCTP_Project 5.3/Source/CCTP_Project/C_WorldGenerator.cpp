@@ -3,6 +3,8 @@
 
 #include "C_WorldGenerator.h"
 #include "KismetProceduralMeshLibrary.h"
+#include "Kismet/GameplayStatics.h"
+#include "GameFramework/Character.h"
 // Sets default values
 AC_WorldGenerator::AC_WorldGenerator()
 {
@@ -160,6 +162,8 @@ void AC_WorldGenerator::GenerateTerrainAsync(const int InSectionIndexX, const in
 	GeneratorBusy = true;
 	SectionIndexX = InSectionIndexX;
 	SectionIndexY = InSectionIndexY;
+	ListedTiles.Add(FIntPoint(InSectionIndexX, InSectionIndexY), MeshSectionIndex);
+
 	AsyncTask(ENamedThreads::AnyBackgroundThreadNormalTask, [&]()
 		{
 			auto WorldGenerateTask = new FAsyncTask <FAsyncWorldMapGenerator>(this);
@@ -198,9 +202,54 @@ void AC_WorldGenerator::DrawTile()
 
 }
 
+FVector AC_WorldGenerator::GetPlayerLocation()
+{
+	ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+	if (PlayerCharacter) {
+
+
+		return PlayerCharacter->GetActorLocation();
+	}
+	return FVector(0,0,0);
+}
+
+FVector2D AC_WorldGenerator::GetTileLocation(FIntPoint TileCoordinate)
+{
+	return FVector2D(TileCoordinate*FIntPoint(XVertexCount -1, YvertexCount -1)*CellSize)+ FVector2D(XVertexCount -1, YvertexCount -1) * CellSize/2;
+}
+
+FIntPoint AC_WorldGenerator::GetClosestListedTile()
+{
+
+	float ClosestDistance = TNumericLimits<float>::Max();
+	FIntPoint ClosestTile{};
+
+
+
+	for (const auto& Entry: ListedTiles)
+	{
+		const FIntPoint& Key = Entry.Key;
+		int Value = Entry.Value;
+		if (Value == 1) {
+			FVector2D TileLocation = GetTileLocation(Key);
+
+			FVector PlayerLocation = GetPlayerLocation();
+			float Distance = FVector2D::Distance(TileLocation, FVector2D(PlayerLocation));
+
+
+			if (Distance < ClosestDistance) {
+				ClosestDistance = Distance;
+
+				ClosestTile = Key;
+			}
+		}
+	}
+	return ClosestTile;
+}
 
 
 void FAsyncWorldMapGenerator::DoWork()
 {
 	WorldGenerator->GenerateMap(WorldGenerator->SectionIndexX, WorldGenerator->SectionIndexY);
 }
+
