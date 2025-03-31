@@ -225,12 +225,12 @@ FIntPoint AC_WorldGenerator::GetClosestListedTile()
 	FIntPoint ClosestTile{};
 
 
-
-	for (const auto& Entry: ListedTiles)
+	for(const auto& Entry: ListedTiles)
 	{
 		const FIntPoint& Key = Entry.Key;
 		int Value = Entry.Value;
-		if (Value == 1) {
+
+		if (Value == -1) {
 			FVector2D TileLocation = GetTileLocation(Key);
 
 			FVector PlayerLocation = GetPlayerLocation();

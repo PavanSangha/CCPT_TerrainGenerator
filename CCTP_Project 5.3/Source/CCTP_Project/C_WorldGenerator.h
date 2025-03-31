@@ -77,10 +77,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void GenerateMap(const int InSectionIndexX, const int InSectionIndexY);
 
-	float GetHeight(const FVector2D Location);
-	float PerlinNoiseWide(const FVector2D Location, const float Scale, const float Amplitude, const FVector2D Offset );
-
-
 	UFUNCTION(BlueprintCallable)
 	void GenerateTerrainAsync(const int InSectionIndexX, const int InSectionIndexY);
 
@@ -95,6 +91,14 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	FIntPoint GetClosestListedTile();
+
+
+
+	float GetHeight(const FVector2D Location);
+	float PerlinNoiseWide(const FVector2D Location, const float Scale, const float Amplitude, const FVector2D Offset );
+
+
+
 
 
 };
