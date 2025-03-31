@@ -153,7 +153,9 @@
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Blueprints/BP_FirstPersonProjectile.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Blueprints/BP_Weapon_Component.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
-				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset"
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Input/Actions/IA_UpOrDown.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Input/IMC_Default.uasset"
 			]
 		}
 	]
