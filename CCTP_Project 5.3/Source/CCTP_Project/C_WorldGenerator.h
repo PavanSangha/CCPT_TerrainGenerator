@@ -51,12 +51,18 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	bool TileDataReady = false;
 
+	UPROPERTY(EditAnywhere,BlueprintReadWrite)
+	float TileReplacedByDistance;
+
+
 	UPROPERTY(BlueprintReadWrite)
 	TMap<FIntPoint, int> ListedTiles;
 
 
 	int SectionIndexX = 0;
 	int SectionIndexY = 0;
+
+	TArray<int32>Triangles;
 
 	//Mesh data
 	TArray<FVector> SSVertices;
@@ -92,7 +98,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FIntPoint GetClosestListedTile();
 
-
+	UFUNCTION(BlueprintCallable)
+	int GetFurthestUpdatedTile();
 
 	float GetHeight(const FVector2D Location);
 	float PerlinNoiseWide(const FVector2D Location, const float Scale, const float Amplitude, const FVector2D Offset );

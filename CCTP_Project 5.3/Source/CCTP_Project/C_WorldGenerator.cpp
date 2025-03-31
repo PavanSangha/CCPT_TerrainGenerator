@@ -11,7 +11,9 @@ AC_WorldGenerator::AC_WorldGenerator()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
     TerrainMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("TerrainMesh"));
-	//TerrainMesh->SetupAttachment(GetRootComponent());
+	
+	TileReplacedByDistance = CellSize * (NumSectionX + NumSectionY) / 2 * (XVertexCount + YvertexCount);
+
 	
 }
 
@@ -34,10 +36,6 @@ void AC_WorldGenerator::Tick(float DeltaTime)
 }
 
 
-
-
-
-
 void AC_WorldGenerator::GenerateMap(const int InSectionIndexX, const int InSectionIndexY)
 {
 	FVector Offet = FVector(InSectionIndexX * (XVertexCount - 1), InSectionIndexY * (YvertexCount - 1), 0.f) * CellSize;
@@ -46,7 +44,6 @@ void AC_WorldGenerator::GenerateMap(const int InSectionIndexX, const int InSecti
 	FVector Vertex;
 	TArray<FVector2D> UVs;
 	FVector2D UV;
-	TArray<int32>Triangles;
 	TArray<FVector> Normals;
 	TArray<FProcMeshTangent> Tangents;
 
@@ -69,22 +66,27 @@ void AC_WorldGenerator::GenerateMap(const int InSectionIndexX, const int InSecti
 	}
 
 	//Triangles
-	for (int32 iTriangleY = 0; iTriangleY <= YvertexCount; iTriangleY++)
+	if (Triangles.Num() == 0)
 	{
 
-		for (int32 iTriangleX = 0; iTriangleX <= XVertexCount; iTriangleX++)
+
+		for (int32 iTriangleY = 0; iTriangleY <= YvertexCount; iTriangleY++)
 		{
-			Triangles.Add(iTriangleX + iTriangleY * (XVertexCount + 2));
-			Triangles.Add(iTriangleX + (iTriangleY + 1) * (XVertexCount + 2));
-			Triangles.Add(iTriangleX + iTriangleY * (XVertexCount + 2) + 1);
 
-			Triangles.Add(iTriangleX + (iTriangleY + 1) * (XVertexCount + 2));
-			Triangles.Add(iTriangleX + (iTriangleY + 1) * (XVertexCount + 2) + 1);
-			Triangles.Add(iTriangleX + iTriangleY * (XVertexCount + 2) + 1);
+			for (int32 iTriangleX = 0; iTriangleX <= XVertexCount; iTriangleX++)
+			{
+				Triangles.Add(iTriangleX + iTriangleY * (XVertexCount + 2));
+				Triangles.Add(iTriangleX + (iTriangleY + 1) * (XVertexCount + 2));
+				Triangles.Add(iTriangleX + iTriangleY * (XVertexCount + 2) + 1);
 
+				Triangles.Add(iTriangleX + (iTriangleY + 1) * (XVertexCount + 2));
+				Triangles.Add(iTriangleX + (iTriangleY + 1) * (XVertexCount + 2) + 1);
+				Triangles.Add(iTriangleX + iTriangleY * (XVertexCount + 2) + 1);
+
+
+			}
 
 		}
-
 	}
 	//calculate subsection mesh to stop seams
 
@@ -180,15 +182,38 @@ void AC_WorldGenerator::GenerateTerrainAsync(const int InSectionIndexX, const in
 void AC_WorldGenerator::DrawTile()
 {
 	TileDataReady = false;
-	
-	//create mesh section
-
-	TerrainMesh->CreateMeshSection(MeshSectionIndex, SSVertices, SSTriangles, SSNormals, SSUVs, TArray<FColor>(), SSTangents, true);
-	if (TerrainMaterial)
+	int FurthestTileIndex = GetFurthestUpdatedTile();
+	if (FurthestTileIndex>-1)
 	{
-		TerrainMesh->SetMaterial(MeshSectionIndex, TerrainMaterial);
+		TArray<int>ValueArray;
+		TArray<FIntPoint>KeyArray;
+		ListedTiles.GenerateKeyArray(KeyArray);
+		ListedTiles.GenerateValueArray(ValueArray);
+		int ReplacedMeshSection = ValueArray[FurthestTileIndex];
+		FIntPoint ReplacedTile = KeyArray[FurthestTileIndex];
+	
+
+		TerrainMesh->UpdateMeshSection(ReplacedMeshSection, SSVertices, SSNormals, SSUVs, TArray<FColor>(), SSTangents);
+		ListedTiles.Add(FIntPoint(SectionIndexX, SectionIndexY), ReplacedMeshSection);
+		ListedTiles.Remove(ReplacedTile);
+
+
 	}
-	MeshSectionIndex++;
+	else
+	{
+
+
+		//create mesh section
+
+		TerrainMesh->CreateMeshSection(MeshSectionIndex, SSVertices, SSTriangles, SSNormals, SSUVs, TArray<FColor>(), SSTangents, true);
+		if (TerrainMaterial)
+		{
+			TerrainMesh->SetMaterial(MeshSectionIndex, TerrainMaterial);
+		}
+		
+		MeshSectionIndex++;
+	}
+	
 
 	SSVertices.Empty();
 	SSNormals.Empty();
@@ -245,6 +270,37 @@ FIntPoint AC_WorldGenerator::GetClosestListedTile()
 		}
 	}
 	return ClosestTile;
+}
+
+int AC_WorldGenerator::GetFurthestUpdatedTile()
+{
+
+
+	float FurthestDistance = -1;
+	int FurthestTileIndex = -1;
+	int CurrentIndex = 0;
+
+	for (const auto& Entry : ListedTiles)
+	{
+		const FIntPoint& Key = Entry.Key;
+		int Value = Entry.Value;
+
+		if (Value != -1) {
+			FVector2D TileLocation = GetTileLocation(Key);
+
+			FVector PlayerLocation = GetPlayerLocation();
+			float Distance = FVector2D::Distance(TileLocation, FVector2D(PlayerLocation));
+
+
+			if (Distance > FurthestDistance&& Distance > TileReplacedByDistance) {
+				FurthestDistance = Distance;
+
+				FurthestTileIndex = CurrentIndex;
+			}
+		}
+		CurrentIndex++;
+	}
+	return FurthestTileIndex;
 }
 
 
