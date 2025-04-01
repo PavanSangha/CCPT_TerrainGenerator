@@ -147,10 +147,10 @@ void AC_WorldGenerator::GenerateMap(const int InSectionIndexX, const int InSecti
 // Change Perlin Noise Height of generated terrain 
 float AC_WorldGenerator::GetHeight(FVector2D Location)
 {
-	return PerlinNoiseWide(Location,.00001f, 20000,FVector2D(.1f)) + 
-		PerlinNoiseWide(Location, .0001f, 2500, FVector2D(.2f)) + 
-		PerlinNoiseWide(Location, .001f, 400, FVector2D(.3f))+
-		PerlinNoiseWide(Location, .01f, 200, FVector2D(.4f));
+	return PerlinNoiseWide(Location,.00001f,30000,FVector2D(.1f)) + 
+		PerlinNoiseWide(Location, .0001f,5000, FVector2D(.2f)) + 
+		PerlinNoiseWide(Location, .001f, 450, FVector2D(.3f))+
+		PerlinNoiseWide(Location, .01f, 100, FVector2D(.4f));
 }
 
 float AC_WorldGenerator::PerlinNoiseWide(const FVector2D Location, const float Scale, const float Amplitude, const FVector2D Offset)
