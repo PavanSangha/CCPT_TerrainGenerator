@@ -10,6 +10,12 @@
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_Map.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/material/M_automatic_Inst.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/BP_CWorldGenerator.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Input/Actions/IA_UpOrDown.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Input/IMC_Default.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/material/M_automatic.uasset",
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/MapGeneration/material/MF_Automatic.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Blueprints/BP_FirstPersonGameMode.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPersonArms/Animations/FP_Walk_Fwd.uasset",
@@ -151,11 +157,7 @@
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Input/IMC_Weapons.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Input/Actions/IA_Shoot.uasset",
 				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Blueprints/BP_FirstPersonProjectile.uasset",
-				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Blueprints/BP_Weapon_Component.uasset",
-				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
-				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Blueprints/BP_ThirdPersonGameMode.uasset",
-				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Input/Actions/IA_UpOrDown.uasset",
-				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/ThirdPerson/Input/IMC_Default.uasset"
+				"C:/CCPT/CCPT_TerrainGenerator/CCTP_Project 5.3/Content/FirstPerson/Blueprints/BP_Weapon_Component.uasset"
 			]
 		}
 	]
