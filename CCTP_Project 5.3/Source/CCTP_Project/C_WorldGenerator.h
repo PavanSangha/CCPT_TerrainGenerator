@@ -87,7 +87,7 @@ public:
 	void GenerateTerrainAsync(const int InSectionIndexX, const int InSectionIndexY);
 
 	UFUNCTION(BlueprintCallable)
-	void DrawTile();
+	int DrawTile();
 
 	UFUNCTION(BlueprintCallable)
 	FVector GetPlayerLocation();

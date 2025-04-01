@@ -147,9 +147,9 @@ void AC_WorldGenerator::GenerateMap(const int InSectionIndexX, const int InSecti
 // Change Perlin Noise Height of generated terrain 
 float AC_WorldGenerator::GetHeight(FVector2D Location)
 {
-	return PerlinNoiseWide(Location,.00001f,30000,FVector2D(.1f)) + 
-		PerlinNoiseWide(Location, .0001f,5000, FVector2D(.2f)) + 
-		PerlinNoiseWide(Location, .001f, 450, FVector2D(.3f))+
+	return PerlinNoiseWide(Location,.00001f,20000,FVector2D(.1f)) + 
+		PerlinNoiseWide(Location, .0001f,3500, FVector2D(.2f)) + 
+		PerlinNoiseWide(Location, .001f, 750, FVector2D(.3f))+
 		PerlinNoiseWide(Location, .01f, 100, FVector2D(.4f));
 }
 
@@ -179,8 +179,9 @@ void AC_WorldGenerator::GenerateTerrainAsync(const int InSectionIndexX, const in
 
 }
 
-void AC_WorldGenerator::DrawTile()
+int AC_WorldGenerator::DrawTile()
 {
+	int DrawnMeshSection;
 	TileDataReady = false;
 	int FurthestTileIndex = GetFurthestUpdatedTile();
 	if (FurthestTileIndex>-1)
@@ -191,7 +192,7 @@ void AC_WorldGenerator::DrawTile()
 		ListedTiles.GenerateValueArray(ValueArray);
 		int ReplacedMeshSection = ValueArray[FurthestTileIndex];
 		FIntPoint ReplacedTile = KeyArray[FurthestTileIndex];
-	
+		DrawnMeshSection = ReplacedMeshSection;
 
 		TerrainMesh->UpdateMeshSection(ReplacedMeshSection, SSVertices, SSNormals, SSUVs, TArray<FColor>(), SSTangents);
 		ListedTiles.Add(FIntPoint(SectionIndexX, SectionIndexY), ReplacedMeshSection);
@@ -210,7 +211,8 @@ void AC_WorldGenerator::DrawTile()
 		{
 			TerrainMesh->SetMaterial(MeshSectionIndex, TerrainMaterial);
 		}
-		
+		DrawnMeshSection = MeshSectionIndex;
+
 		MeshSectionIndex++;
 	}
 	
@@ -224,7 +226,7 @@ void AC_WorldGenerator::DrawTile()
 
 	GeneratorBusy = false;
 
-
+	return DrawnMeshSection;
 }
 
 FVector AC_WorldGenerator::GetPlayerLocation()
