@@ -45,7 +45,7 @@ public:
 	UMaterialInterface* TerrainMaterial = nullptr;
 
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadWrite)
 	bool GeneratorBusy = false;
 
 	UPROPERTY(BlueprintReadOnly)

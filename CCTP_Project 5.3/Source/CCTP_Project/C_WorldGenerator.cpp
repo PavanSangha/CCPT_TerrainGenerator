@@ -11,7 +11,7 @@ AC_WorldGenerator::AC_WorldGenerator()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
     TerrainMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("TerrainMesh"));
-	
+	TerrainMesh->bUseAsyncCooking = true;
 	TileReplacedByDistance = CellSize * (NumSectionX + NumSectionY) / 2 * (XVertexCount + YvertexCount);
 
 	
@@ -22,8 +22,6 @@ void AC_WorldGenerator::BeginPlay()
 {
 	
 	Super::BeginPlay();
-
-	//TerrainMesh->CreateMeshSection(TArray<FVector>(), TArray<FVector2D>(), TArray<FColor>(), TArray<FProcMeshTangent>(), true);
 
 
 }
@@ -88,13 +86,7 @@ void AC_WorldGenerator::GenerateMap(const int InSectionIndexX, const int InSecti
 
 		}
 	}
-	//calculate subsection mesh to stop seams
 
-	//TArray<FVector>SSVertices;
-	//TArray<FVector2D> SSUVs;
-	//TArray<int32>SSTriangles;
-	//TArray<FVector> SSNormals;
-	//TArray<FProcMeshTangent> SSTangents;
 
 	int VertexIndex = 0;
 
@@ -194,7 +186,10 @@ int AC_WorldGenerator::DrawTile()
 		FIntPoint ReplacedTile = KeyArray[FurthestTileIndex];
 		DrawnMeshSection = ReplacedMeshSection;
 
-		TerrainMesh->UpdateMeshSection(ReplacedMeshSection, SSVertices, SSNormals, SSUVs, TArray<FColor>(), SSTangents);
+		
+		TerrainMesh->ClearMeshSection(ReplacedMeshSection);
+		TerrainMesh->CreateMeshSection(ReplacedMeshSection, SSVertices, SSTriangles, SSNormals, SSUVs, TArray<FColor>(), SSTangents, true);
+
 		ListedTiles.Add(FIntPoint(SectionIndexX, SectionIndexY), ReplacedMeshSection);
 		ListedTiles.Remove(ReplacedTile);
 
@@ -222,9 +217,6 @@ int AC_WorldGenerator::DrawTile()
 	SSNormals.Empty();
 	SSUVs.Empty();
 	SSTangents.Empty();
-
-
-	GeneratorBusy = false;
 
 	return DrawnMeshSection;
 }
